@@ -25,9 +25,9 @@ import anywheresoftware.b4a.objects.ViewWrapper;
 @BA.ActivityObject
 @BA.Author("Trevor Hart")
 @BA.ShortName("MapView")
-@BA.Version(10.11F)
+@BA.Version(10.20F)
 
-@DependsOn(values = {"ArcGIS_Android","jackson-core-lgpl-1.9.5","jackson-mapper-lgpl-1.9.5"})
+@DependsOn(values = {"arcgis-android-api","arcgis-android-app-framework","jackson-core-lgpl-1.9.5","jackson-mapper-lgpl-1.9.5","jcifs-1.3.17"})
 @Permissions(values = {"android.permission.INTERNET","android.permission.WRITE_EXTERNAL_STORAGE","android.permission.ACCESS_FINE_LOCATION"})
 
 public class MapViewWrapper extends ViewWrapper<MapView>
