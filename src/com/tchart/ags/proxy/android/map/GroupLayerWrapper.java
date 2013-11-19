@@ -154,7 +154,7 @@ public class GroupLayerWrapper  extends AbsObjectWrapper<GroupLayer>
 	/**
 	* The initialization of a GroupLayer is depended upon if it is empty (return false
 	*/
-	public boolean isInitialized()
+	public boolean IsInitialized()
 	{
 		return getObject().isInitialized();
 	}
