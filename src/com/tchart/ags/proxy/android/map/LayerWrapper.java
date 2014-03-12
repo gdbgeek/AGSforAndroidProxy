@@ -227,7 +227,7 @@ public class LayerWrapper  extends AbsObjectWrapper<Layer>
 	/**
 	* Gets the initialized of the Layer.
 	*/
-	public boolean isInitialized()
+	public boolean IsInitialized()
 	{
 		return getObject().isInitialized();
 	}

@@ -33,32 +33,41 @@ import anywheresoftware.b4a.objects.collections.List;
 @BA.ActivityObject
 @BA.Author("Trevor Hart")
 @BA.ShortName("MapView")
-@BA.Version(10.20F)
+@BA.Version(10.22F)
 
-@DependsOn(values = {"arcgis-android-api","arcgis-android-app-framework","jackson-core-lgpl-1.9.5","jackson-mapper-lgpl-1.9.5","jcifs-1.3.17"})
+@DependsOn(values = {"arcgis-android-api","arcgis-android-app-toolkit","jackson-core-lgpl-1.9.5","jackson-mapper-lgpl-1.9.5","jcifs-1.3.17"})
 @Permissions(values = {"android.permission.INTERNET","android.permission.WRITE_EXTERNAL_STORAGE","android.permission.ACCESS_FINE_LOCATION"})
 
 public class MapViewWrapper extends ViewWrapper<MapView>
 {	
   static
   {
+	  Log.i("B4A", "loadLibrary Start");
 	System.loadLibrary("runtimecore_java");
+	Log.i("B4A", "loadLibrary End");
   }
   
   public void Initialize(BA ba, String EventName)
   {	
+	Log.i("B4A", "Initialize Start");
     super.Initialize(ba, EventName);
+    Log.i("B4A", "Initialize End");
   }
 
   @BA.Hide
   public void innerInitialize(final BA pBA, final String eventName, boolean keepOldObject)
   {
+	Log.i("B4A", "innerInitialize 1");  
     if (!keepOldObject)
     {
       MapView mapView = new MapView(pBA.context);
       setObject(mapView);
     }
+    Log.i("B4A", "innerInitialize 2");
+    
     super.innerInitialize(pBA, eventName, true);
+    
+    Log.i("B4A", "innerInitialize 4");
     
     if (ba.subExists(eventName + "_onsingletaplistener"))
     {    	
@@ -74,6 +83,8 @@ public class MapViewWrapper extends ViewWrapper<MapView>
     		}
     	});
     }
+    
+    Log.i("B4A", "innerInitialize 4");
     
     if (ba.subExists(eventName + "_onlongpresslistener"))
     {    	
