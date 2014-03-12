@@ -4,7 +4,7 @@ import android.content.Context;
 import anywheresoftware.b4a.BA;
 import anywheresoftware.b4a.AbsObjectWrapper;
 import com.esri.android.action.IdentifyResultView;
-import com.esri.core.tasks.ags.identify.IdentifyResult;
+import com.esri.core.tasks.identify.IdentifyResult;
 
 @BA.Author("Trevor Hart")
 @BA.ShortName("IdentifyResultView")

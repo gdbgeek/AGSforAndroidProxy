@@ -257,7 +257,7 @@ public class ArcGISFeatureLayerWrapper  extends AbsObjectWrapper<ArcGISFeatureLa
 	/**
 	* Returns the factor used to calculate buffered extent.
 	*/
-	public int getBufferFactor()
+	public double getBufferFactor()
 	{
 		return getObject().getBufferFactor();
 	}
