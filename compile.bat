@@ -1,7 +1,7 @@
 @echo off
 
 SET Lib_Name=AGSforAndroidProxy
-SET Lib_Source_Dir=%CD%
+SET Lib_Source_Dir="%CD%"
 SET B4A_SLC=D:\Basic4android\SimpleLibraryCompiler\LibraryCompiler.exe
 
 echo Library Name = %Lib_Name%

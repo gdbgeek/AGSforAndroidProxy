@@ -13,6 +13,7 @@ import com.esri.core.symbol.Symbol;
 
 import anywheresoftware.b4a.AbsObjectWrapper;
 
+@SuppressWarnings("deprecation")
 @BA.Author("Trevor Hart")
 @BA.ShortName("LocationService")
 

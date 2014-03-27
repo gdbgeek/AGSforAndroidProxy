@@ -115,6 +115,7 @@ public class GraphicsLayerWrapper  extends AbsObjectWrapper<GraphicsLayer>
 	/**
 	* Returns a swatch image of the given geometry rendered with the specified symbol.
 	*/
+	@SuppressWarnings("deprecation")
 	public Bitmap createSymbolImage(Symbol symbol, Geometry geometry, int width, int height, int color)
 	{
 		return getObject().createSymbolImage(symbol, geometry, width, height, color);
@@ -123,6 +124,7 @@ public class GraphicsLayerWrapper  extends AbsObjectWrapper<GraphicsLayer>
 	/**
 	* Returns a swatch image array of for the given geometries rendered with the symbols.
 	*/
+	@SuppressWarnings("deprecation")
 	public Bitmap[] createSymbolImages(Symbol[] symbol, Geometry[] geometry, int width, int height, int color)
 	{
 		return getObject().createSymbolImages(symbol, geometry, width, height, color);

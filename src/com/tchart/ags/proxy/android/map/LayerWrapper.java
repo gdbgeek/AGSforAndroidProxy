@@ -2,7 +2,6 @@ package com.tchart.ags.proxy.android.map;
 
 import anywheresoftware.b4a.BA;
 import anywheresoftware.b4a.AbsObjectWrapper;
-import anywheresoftware.b4a.objects.collections.List;
 import anywheresoftware.b4a.objects.collections.Map;
 import com.esri.android.map.Layer;
 import com.esri.android.map.MapView;

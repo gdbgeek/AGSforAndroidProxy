@@ -30,6 +30,7 @@ import anywheresoftware.b4a.BA.Permissions;
 import anywheresoftware.b4a.objects.ViewWrapper;
 import anywheresoftware.b4a.objects.collections.List;
 
+@SuppressWarnings("deprecation")
 @BA.ActivityObject
 @BA.Author("Trevor Hart")
 @BA.ShortName("MapView")
@@ -42,33 +43,25 @@ public class MapViewWrapper extends ViewWrapper<MapView>
 {	
   static
   {
-	  Log.i("B4A", "loadLibrary Start");
 	System.loadLibrary("runtimecore_java");
-	Log.i("B4A", "loadLibrary End");
   }
   
   public void Initialize(BA ba, String EventName)
   {	
-	Log.i("B4A", "Initialize Start");
     super.Initialize(ba, EventName);
-    Log.i("B4A", "Initialize End");
   }
 
   @BA.Hide
   public void innerInitialize(final BA pBA, final String eventName, boolean keepOldObject)
   {
-	Log.i("B4A", "innerInitialize 1");  
     if (!keepOldObject)
     {
       MapView mapView = new MapView(pBA.context);
       setObject(mapView);
     }
-    Log.i("B4A", "innerInitialize 2");
     
     super.innerInitialize(pBA, eventName, true);
-    
-    Log.i("B4A", "innerInitialize 4");
-    
+ 
     if (ba.subExists(eventName + "_onsingletaplistener"))
     {    	
     	getObject().setOnSingleTapListener(new OnSingleTapListener()
@@ -83,9 +76,7 @@ public class MapViewWrapper extends ViewWrapper<MapView>
     		}
     	});
     }
-    
-    Log.i("B4A", "innerInitialize 4");
-    
+  
     if (ba.subExists(eventName + "_onlongpresslistener"))
     {    	
     	getObject().setOnLongPressListener(new OnLongPressListener()       	
